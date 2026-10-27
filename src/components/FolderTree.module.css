@@ -1,0 +1,114 @@
+.treeContainer {
+  padding: 8px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.topActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  gap: 6px;
+}
+
+.allBtn {
+  flex: 1;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text-primary, #f1f5f9);
+  cursor: pointer;
+  background: var(--bg-surface, #131926);
+  border: 1px solid var(--border-color, #232d42);
+  transition: all 0.15s ease;
+}
+
+.createRootBtn {
+  background: var(--bg-surface, #131926);
+  color: var(--accent, #38bdf8);
+  border: 1px solid var(--border-color, #232d42);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.createRootBtn:hover {
+  background: var(--bg-elevated, #1a2234);
+}
+
+.treeList {
+  list-style: none;
+  margin: 0;
+  padding-left: 12px;
+}
+
+.nodeItem {
+  margin: 2px 0;
+}
+
+.nodeRow {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text-secondary, #94a3b8);
+  border: 1px solid transparent;
+  gap: 6px;
+  transition: all 0.15s ease;
+}
+
+.nodeRow:hover {
+  background: var(--bg-elevated, #1a2234);
+  color: var(--text-primary, #f1f5f9);
+}
+
+.activeRow {
+  background: var(--bg-elevated, #1a2234) !important;
+  color: var(--accent, #38bdf8) !important;
+  border-color: var(--border-color, #232d42) !important;
+}
+
+.dropTargetOver {
+  background: #38bdf822 !important;
+  border-color: var(--accent, #38bdf8) !important;
+  color: var(--accent, #38bdf8) !important;
+}
+
+.icon {
+  font-size: 14px;
+}
+
+.title {
+  flex: 1;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.subBtn, .deleteBtn {
+  background: none;
+  border: none;
+  color: var(--text-muted, #64748b);
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.subBtn:hover { color: var(--accent, #38bdf8); }
+.deleteBtn:hover { color: #f87171; }
+
+.inlineCreate input {
+  width: 100%;
+  background: var(--bg-elevated, #1a2234);
+  border: 1px solid var(--accent, #38bdf8);
+  border-radius: 4px;
+  color: var(--text-primary, #f1f5f9);
+  padding: 4px 8px;
+  font-size: 12px;
+  margin: 4px 0;
+  outline: none;
+}

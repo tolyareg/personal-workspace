@@ -1,0 +1,89 @@
+.canvasContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-surface, #131926);
+  border: 1px solid var(--border-color, #232d42);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background-color: var(--bg-elevated, #1a2234);
+  border-bottom: 1px solid var(--border-color, #232d42);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolBtn {
+  background: var(--bg-surface, #131926);
+  color: var(--text-primary, #f1f5f9);
+  border: 1px solid var(--border-color, #232d42);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.toolBtn:hover:not(:disabled) {
+  background: var(--bg-hover, #232d42);
+}
+
+.toolBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.activeBtn {
+  background: var(--accent, #38bdf8) !important;
+  color: #0b0f17 !important;
+  font-weight: 600;
+  border-color: var(--accent, #38bdf8) !important;
+}
+
+.dangerBtn {
+  color: #f87171 !important;
+  border-color: #ef444433 !important;
+}
+
+.dangerBtn:hover:not(:disabled) {
+  background: #ef444422 !important;
+}
+
+.colorDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  padding: 0;
+}
+
+.slider {
+  width: 70px;
+  accent-color: var(--accent, #38bdf8);
+}
+
+.viewport {
+  width: 100%;
+  height: 360px;
+  background-color: #0b0f17; /* Тёмный холст */
+  position: relative;
+}
+
+.canvasSurface {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
